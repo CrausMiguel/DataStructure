@@ -1,5 +1,6 @@
 from binary_tree import BinaryTree
 from deck import Deck
+from hash_table import HashTable
 
 if __name__ == "__main__":
 
@@ -42,3 +43,12 @@ if __name__ == "__main__":
     root.in_order()
     print("-" * 10)
     root.pos_order()
+
+    # Hash Table
+    print("\n--Hash Table--")
+    ht = HashTable()
+
+    ht.insert('025', 'Leonardo')
+    ht.insert('050', 'Amendoim')
+    print("Chave 025: " + ht.find('025'))
+    ht.print()
