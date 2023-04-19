@@ -4,8 +4,8 @@ indices = {}
 matriz = []
 direcional = True
 
-def main():
 
+def main():
     linhas = open("grapho.txt", "r")
 
     count_linha = 0
@@ -34,7 +34,7 @@ def main():
 
             matriz[indice_origem][indice_destino] = 1
 
-            if direcional == False:
+            if not direcional:
                 matriz[indice_destino][indice_origem] = 1
 
         count_linha += 1
@@ -43,7 +43,5 @@ def main():
         print(matriz[i])
 
 
-
 if __name__ == '__main__':
     main()
-

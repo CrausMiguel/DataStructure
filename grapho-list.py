@@ -20,8 +20,10 @@ def main():
 
             origem = vertices[0]
             destino = vertices[1]
+            peso = vertices[2]
 
-            lista_adj[origem].append(destino)
+            aresta = {'destino': destino, 'peso': peso}
+            lista_adj[origem].append(aresta)
 
         count_linha += 1
     print(lista_adj)
