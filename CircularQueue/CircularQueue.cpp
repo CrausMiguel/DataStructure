@@ -6,7 +6,7 @@ using namespace std;
 
 
 bool CircularQueue::IsEmpty() {
-	return m_front == m_rear;
+	return m_front > m_rear or (m_front == -1 and m_rear == -1);
 }
 
 bool CircularQueue::IsFull() {
@@ -21,8 +21,10 @@ int CircularQueue::Enqueue(int value) {
 	if (IsEmpty()) {
 		m_front = m_rear = 0;
 	}
+	else {
+		m_rear = (m_rear + 1) % 5;
+	}
 	m_queue[m_rear] = value;
-	m_rear = (m_rear + 1) % 5;
 	return value;
 }
 
